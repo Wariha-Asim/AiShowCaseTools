@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <ul id="nav-menu" class="menu">
+              <li><a href="#image">AI Image Generation</a></li>
+              <li><a href="#icon">Icon Generation</a></li>
+              <li><a href="#pdf">PDF Generation</a></li>
+              <li><a href="#video">Video Generation</a></li>
+              <li><a href="#background">Background Generation</a></li>
+              <li><a href="#background-removal">Background Removal</a></li>
+              <li><a href="#news-generation">Mockup News</a></li>
+            </ul>
+          </nav>
+        
+    </header>
+
+    <main>
+        <h1>AI Tools Showcase</h1>
+        <div class="container">
+            <section id="image">
+                <h2>AI Image Generation from Text</h2>
+                <button class="close-btn" onclick="closeSection('image')">&times;</button>
+                <input type="text" id="image-text" placeholder="Enter description (e.g., cat)">
+                <button onclick="generateImage()">Generate Image</button>
+                <div id="image-result"></div>
+            </section>
+
+            <!-- Icon Generation -->
+            <section id="icon">
+                <h2>Icon Generation</h2>
+                <button class="close-btn" onclick="closeSection('icon')">&times;</button>
+                <input type="text" id="icon-text" placeholder="Enter icon type (e.g., home)">
+                <button onclick="generateIcon()">Generate Icon</button>
+                <div id="icon-result"></div>
+            </section>
+
+            <!-- PDF Generation -->
+            <section id="pdf">
+                <h2>PDF Generation</h2>
+                <button class="close-btn" onclick="closeSection('pdf')">&times;</button>
+                <textarea id="pdf-content" placeholder="Enter content for PDF"></textarea>
+                <button onclick="generatePDF()">Generate PDF</button>
+                <div id="pdf-result"></div>
+            </section>
+
+            <!-- Video Generation -->
+            <section id="video">
+                <h2>Video Generation</h2>
+                <button class="close-btn" onclick="closeSection('video')">&times;</button>
+                <input type="text" id="video-text" placeholder="Enter video description (e.g., tutorial)">
+                <button onclick="generateVideo()">Generate Video</button>
+                <div id="video-result"></div>
+            </section>
+
+            <!-- Background Generation -->
+            <section id="background">
+                <h2>Background Generation</h2>
+                <button class="close-btn" onclick="closeSection('background')">&times;</button>
+                <input type="text" id="background-text" placeholder="Enter background type (e.g., abstract)">
+                <button onclick="generateBackground()">Generate Background</button>
+                <div id="background-result"></div>
+            </section>
+
+            <!-- Background Removal -->
+            <section id="background-removal">
+                <h2>Background Removal</h2>
+             <button class="close-btn" onclick="closeSection('background-removal')">&times;</button>
+              
+                <label for="background-removal-file">Upload your image:</label>
+                <input type="file" id="background-removal-file" accept="image/*" onchange="processImage()">
+            
+                <div id="background-removal-result"></div>
+            </section>
+
+            <!-- Mockup News -->
+            <section id="news-generation">
+                <h2>Generate News</h2>
+                <button class="close-btn" onclick="closeSection('news-generation')">&times;</button>
+                <label for="news-content">Enter news topic:</label>
+                <input type="text" id="news-content" placeholder="Enter topic (e.g., breaking news)">
+                <button onclick="generateNews()">Generate News</button>
+                <div id="news-result"></div>
+            </section>
+
+
+            <footer>
+                <p>&copy; 2024 AI Tools Showcase. All rights reserved.</p>
+                
+            </footer>
+
+            <script src="script.js"></script>
+</body>
+
+</html>
